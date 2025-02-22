@@ -1,20 +1,55 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Temperatura</ion-card-title>
+    <ion-card-subtitle>ºC ↔ ºF</ion-card-subtitle>
+  </ion-card-header>
+  <ion-input type="number" label="Digite a temperatura" label-placement="floating" fill="solid"
+    placeholder="Digite aqui sua temperatura" [(ngModel)]="temperatura"></ion-input>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-button (click)="tempC()">Converter ºC</ion-button>
+  <ion-button (click)="tempF()">Converter ºF</ion-button>
+  <p> Resultado {{tempFinal}}</p>
+</ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Triangulo</ion-card-title>
+    <ion-card-subtitle>Descubra se seu Triangulo é Equilatero, Isoceles ou Escaleno</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-input type="number" label="Digite o lado 1" label-placement="floating" fill="solid" placeholder="Lado 1"
+    [(ngModel)]="lado1"></ion-input>
+
+  <ion-input type="number" label="Digite o lado 2" label-placement="floating" fill="solid" placeholder="Lado 2"
+    [(ngModel)]="lado2"></ion-input>
+
+  <ion-input type="number" label="Digite o lado 3" label-placement="floating" fill="solid" placeholder="Lado 3"
+    [(ngModel)]="lado3"></ion-input>
+
+  <ion-button (click)="checarTriangulo()">Verificar</ion-button>
+
+  <p> Seu triangulo é um {{resTriangulo}}</p>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Média final</ion-card-title>
+    <ion-card-subtitle>Descubra se passou, repovou ou ficou retido</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-input type="number" label="Nota 1" label-placement="floating" fill="solid" placeholder="Nota 1"
+    [(ngModel)]="nota1"></ion-input>
+
+  <ion-input type="number" label="Nota 2" label-placement="floating" fill="solid" placeholder="Nota 2"
+    [(ngModel)]="nota2"></ion-input>
+
+  <ion-input type="number" label="Nota 3" label-placement="floating" fill="solid" placeholder="Nota 3"
+    [(ngModel)]="nota3"></ion-input>
+
+  <ion-input type="number" label="Nota 4" label-placement="floating" fill="solid" placeholder="Nota 4 "
+    [(ngModel)]="nota4"></ion-input>
+
+  <ion-button (click)="checarMedia()">Verificar</ion-button>
+  <p> Você ficou {{mediaFinal}} </p>
+
+</ion-card>
